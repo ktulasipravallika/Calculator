@@ -41,7 +41,7 @@ public class Calculator {
 	 * @return int
 	 */
 
-	public int division(int dividend, int divisor){
+	public double division(int dividend, int divisor){
 		if (divisor == 0) {
 			if (dividend == 0) {
 				throw new ArithmeticException("Division of 0 by 0 is undefined");
@@ -49,6 +49,6 @@ public class Calculator {
 				throw new ArithmeticException("Division by zero is not allowed");
 			}
 		}
-		return dividend/divisor;
+		return (double)dividend/divisor;
 	}
 }
