@@ -15,7 +15,7 @@ public class CalculatorTest extends TestCase {
 		Assert.assertEquals(cal.sub(20, 10), 10);
 	}
 	public void testDivision(){
-		Assert.assertEquals(cal.division(100, 10), 10);
+		Assert.assertEquals(cal.division(5, 2), 2.5);
 	}
 	public void testDivisionByZero(){
 		try {
