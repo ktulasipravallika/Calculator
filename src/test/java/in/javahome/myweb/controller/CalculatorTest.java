@@ -17,4 +17,21 @@ public class CalculatorTest extends TestCase {
 	public void testDivision(){
 		Assert.assertEquals(cal.division(100, 10), 10);
 	}
+	public void testDivisionByZero(){
+		try {
+			cal.division(10, 0);
+			fail("Expected an ArithmeticException to be thrown");
+		} catch (ArithmeticException e) {
+			assertEquals("Division by zero is not allowed", e.getMessage());
+		}
+	}
+
+	public void testDivisionOfZeroByZero(){
+		try {
+			cal.division(0, 0);
+			fail("Expected an ArithmeticException to be thrown");
+		} catch (ArithmeticException e) {
+			assertEquals("Division of 0 by 0 is undefined", e.getMessage());
+		}
+	}
 }
