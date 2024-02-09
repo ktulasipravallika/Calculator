@@ -5,7 +5,7 @@ package in.javahome.myweb.controller;
  * addition, subtraction, multiplication, division.
  */
 public class Calculator {
-	
+
 	/* Method to perform Addition
 	 * @param i
 	 * @param j
@@ -41,7 +41,14 @@ public class Calculator {
 	 * @return int
 	 */
 
-	public int division(int i, int j){
-		return i/j;
+	public int division(int dividend, int divisor){
+		if (divisor == 0) {
+			if (dividend == 0) {
+				throw new ArithmeticException("Division of 0 by 0 is undefined");
+			} else {
+				throw new ArithmeticException("Division by zero is not allowed");
+			}
+		}
+		return dividend/divisor;
 	}
 }
