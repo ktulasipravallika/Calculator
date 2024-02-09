@@ -11,4 +11,10 @@ public class CalculatorTest extends TestCase {
 	public void testMultiply(){
 		Assert.assertEquals(cal.multiply(10, 20), 200);
 	}
+	public void testSubtract(){
+		Assert.assertEquals(cal.sub(20, 10), 10);
+	}
+	public void testDivision(){
+		Assert.assertEquals(cal.division(100, 10), 10);
+	}
 }
